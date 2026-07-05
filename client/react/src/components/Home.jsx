@@ -96,10 +96,9 @@ export default function Home() {
           headers: { "Content-Type": userImage.type },
         });
 
-        await fetch(`${import.meta.env.VITE_FASTAPI_BACKEND_URI}/analyze-image`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ key: data.key, id: user.id }),
+        await api.post("/api/analyze-image", {
+          key: data.key,
+          id: user.id,
         });
 
         toast.success("Image uploaded and sent for analysis");

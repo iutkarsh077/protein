@@ -12,7 +12,10 @@ import httpx
 
 load_dotenv()
 
-origins = ["http://localhost:5173", "http://localhost:4000"]
+
+frontend_url = os.getenv("FRONTEND_URL")
+express_url = os.getenv("NODEJS_BACKEND")
+origins = [frontend_url, express_url]
 
 
 class AnalyzeImageUrl(BaseModel):

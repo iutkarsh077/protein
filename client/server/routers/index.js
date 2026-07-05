@@ -1,4 +1,5 @@
 import { Router } from "express"
+import analyzeImage from "../controllers/analyze-image.js";
 import getPresignedUrl from "../controllers/aws_presignedUrl.js";
 import getUser from "../controllers/get-user.js";
 import LoginUser from "../controllers/login.js";
@@ -11,6 +12,7 @@ import getUserData from "../controllers/get-user-data.js";
 const route = Router();
 
 route.post("/get-url", getPresignedUrl)
+route.post("/analyze-image", analyzeImage)
 route.post("/login", LoginUser)
 route.post("/save-analysis", SaveAnalysis)
 route.post("/send-otp", SendVerificationOTP)
