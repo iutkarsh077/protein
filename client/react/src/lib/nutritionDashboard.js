@@ -1,6 +1,6 @@
 import { format, isSameDay, startOfDay, subDays } from "date-fns";
 
-const CALORIE_GOAL = 22;
+const CALORIE_GOAL = 2200;
 
 const NUTRIENT_GOALS = {
   protein_g: 140,
