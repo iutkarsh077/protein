@@ -126,6 +126,24 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  .moving-navbar-track {
+    animation: moving-navbar-scroll 24s linear infinite;
+  }
+
+  .moving-navbar-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes moving-navbar-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @layer base {

@@ -1,7 +1,13 @@
+import MovingNavbar from './components/movingNavbar'
 import CustomRoute from './router/route'
 
 function App() {
-  return <CustomRoute/>
+  return (
+    <>
+    <MovingNavbar/>
+    <CustomRoute/>
+    </>
+  )
 }
 
 export default App

@@ -33,4 +33,11 @@ app.get("/health", (req, res) => {
   return res.json({ currentDate: new Date().toISOString() });
 });
 
-export default app;
+dbConnect().then(()=>{
+  app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
+  });
+}).catch((error)=>{
+  console.error("DB connection failed:", error);
+  process.exit(1);
+})
