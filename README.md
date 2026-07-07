@@ -5,7 +5,7 @@
 **Nourish** is an AI-powered nutrition tracking app. Users upload meal photos, get automatic macro and calorie estimates, and view a daily dashboard with calories, protein, carbs, fats, fiber, sugar, and weekly intake trends.
 
 **Live app:** [https://protein-nine.vercel.app](https://protein-nine.vercel.app)
-
+**Demo video:** [https://youtu.be/AKqM69CaISE?si=siKE3SrrPglRCRxe](https://youtu.be/AKqM69CaISE?si=siKE3SrrPglRCRxe)
 ---
 
 ## Features
