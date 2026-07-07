@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import api from "@/utils/api";
+import { Loader2 } from "lucide-react";
 
 const UserContext = createContext();
 
@@ -44,7 +45,11 @@ const GlobalContextProvider = ({ children }) => {
   }, [user, isLoading, location.pathname, navigate]);
 
   if (isLoading) {
-    return null;
+    return (
+      <div className="w-screen h-screen overflow-hidden flex justify-center items-center">
+        <Loader2 className="text-black w-8 h-8 animate-spin"/>
+      </div>
+    );
   }
 
   return (
